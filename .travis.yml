@@ -14,3 +14,17 @@ deploy:
   app: lp712019
   on:
     repo: MohamedCA2018/LP712019
+
+
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database LP712019_test;' -U postgres
+
+test:
+adapter: postgresql
+database: LP712019_test
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+
