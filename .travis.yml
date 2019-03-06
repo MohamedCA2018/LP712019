@@ -7,6 +7,10 @@ before_script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 - bundle exec rake assets:precompile
+
+- psql -c 'create database LP712019_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+
 deploy:
   provider: heroku
   api_key:
@@ -18,13 +22,12 @@ deploy:
 
 services:
   - postgresql
-before_script:
-  - psql -c 'create database LP712019_test;' -U postgres
 
 test:
-adapter: postgresql
-database: LP712019_test
+  adapter: postgresql
+  database: LP712019_test
 
-before_script:
-  - cp config/database.yml.travis config/database.yml
+development:
+  adapter: postgresql
+  database: LP712019_development
 
