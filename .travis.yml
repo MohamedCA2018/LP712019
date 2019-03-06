@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.3.5
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: "QB7TvCqkdsMxlq+MS22BSCr3aOAMRSbx0PZBOu4zybJvD9R/S/IzbnYvO6/VgyAukTpRxkD1oHlXhK44JO0u6AeMt4BXWCVmBVOJ5geLJ7Iqo7Z0gsZrq9MkCFwkDMIFW3A4gQS7JPHuEHC/0vf2iHkB9gKfIBi8ynOCfv8d6KQiQvi/JV1ELxIRKn9KKtnQNAj9wH1N+2R0gHBOiT4XtOF6zv47DhBVxaZMqHVaNOa+n1eR9BhyqnhQs+CRKQEMfjofRfM6ztjZjmJ6jQgTkAtAkK4kB/H2VDjXydwGNt4+3h6SJVDvWWGJENpaG9AiR3yFmnIesggikUgGIsxvpuLP6j2PMZulelj9B2AqooXg+YyhikywiaY+FqhLyh95h10fIATVvlFFLUkCd60TnImVT3cMHQdJJqnHuvDoCLJB7fAcz4ffZocFrESUqB60EAd1vjfJfSXUjuhgDILdKHEljEVnBXX8XyQ7gzR9gJQefDelEyd6Puind66ovL5nL89IkEDPnUt523/q6jzRcek3UhdpbZ8nzmRN7gqaUR2U5lvFC/o/h5McLdA2/nv+L6pFCmHpX92cdk4mXbC9Mom2Zshx6cJyiOADaqRwBHQKJRX2/FqkiuFPv2Cx2L3YXHrTLxM+APqxq8kgY6tp4QOFdoW8dxOICzJpzIzrAxw="
+  app: lp712019
+  on:
+    repo: MohamedCA2018/LP712019
