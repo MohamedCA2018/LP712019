@@ -1,0 +1,11 @@
+test:
+  adapter: postgresql
+  database: LP712019_test
+  encoding: utf8
+  username: postgres
+
+development:
+  adapter: postgresql
+  database: LP712019_development
+  encoding: utf8
+  username: postgres

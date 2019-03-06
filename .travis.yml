@@ -23,11 +23,3 @@ deploy:
 services:
   - postgresql
 
-test:
-  adapter: postgresql
-  database: LP712019_test
-
-development:
-  adapter: postgresql
-  database: LP712019_development
-
