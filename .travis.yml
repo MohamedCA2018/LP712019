@@ -1,14 +1,14 @@
 language: ruby
-rvm:
-- 2.3.5
 services:
-- postgresql
+  - postgresql
+rvm:
+ - 2.3.5
+env:
+ - db=postgresql
 before_script:
-- bundle exec rake db:create
-- bundle exec rake db:migrate
-- bundle exec rake assets:precompile
-- psql -c 'create database LP712019_test;' -U postgres
-- cp config/database.yml.travis config/database.yml
+  - cp config/database.yml.travis config/database.yml
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
 deploy:
   provider: heroku
   api_key:
