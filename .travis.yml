@@ -11,6 +11,8 @@ before_script:
 - cp config/database.yml.travis config/database.yml
 deploy:
   provider: heroku
+  api_key:
+    secure: a2e8029c-d303-4817-88d9-a355f4c25140
   app: lp712019
   on:
     repo: MohamedCA2018/LP712019
