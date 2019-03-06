@@ -1,8 +1,8 @@
 language: ruby
 rvm:
-- 2.3.7
-cache:
-- bundler
+- 2.3.5
+services:
+- postgresql
 before_script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
@@ -14,11 +14,7 @@ deploy:
   api_key:
     secure: a2e8029c-d303-4817-88d9-a355f4c25140
   app: lp712019
-  on:
-    repo: MohamedCA2018/LP712019
-services:
-- postgresql
 
-env:
-  global:
-    secure: IlesowXN6mWb2lZBYGvMVd+I8LNgZyMMwdO7T3tAnzThNxEflsCAc/1wPQI0P8eHhkdAVAhz84QHfxK3NjgBG/qkkyADJnBrAvocz36zuQ6xPDfLqj/okNuCnEOgvhUglJTyoMGmde5mblWKTbhBXbI1LI+Tqeh4a1f+lawRvG/wP7f0o+/Nx5WTKNzTy+H19L86RDBOzYgBjBHGWYqidAKkmwGlIljQBjD1YLiRefytfdR5w69Z+alkMFAVUscx+Ns+ojMYNdyX5aAfSzvUaRH0WNUPGOE35psQ0rEZ3A5/40C5+bGQ2p11A13Vewo7wAjG3Ux3Em7cZ9YsRR2xJzaQx52hyRBa8skHsbQdSBubUk4pF2gWsEL5gQDzBrj6rmc2R/v/pr+RmY4FBD9mfFJB3sqYmlFVKiYowj61WkUx79s+thOOZx0iqe7+wYQAIM0ZssIDGNKXEkFgYWRKjLgJQGwbyd38w63aSDPj/rpbj9QNE+XOqHdxozFIsxKqAmwwzd6hjPJmhtJYtIvnsJylTCgQUi4uQh34VfNuFlxRS4bCgDI1ZY70qKxmaXxuw2tS2CmaFVS3w1r7UEodxewVDwmXWYgAZbhaQPoG2spsgXkpgYfPYbE8JA5K9DOYItFwMXYkNA9rp3hwbIXzkFFY3P8jT01M6B0hvAid+aY=
+# env:
+#   global:
+#     secure: IlesowXN6mWb2lZBYGvMVd+I8LNgZyMMwdO7T3tAnzThNxEflsCAc/1wPQI0P8eHhkdAVAhz84QHfxK3NjgBG/qkkyADJnBrAvocz36zuQ6xPDfLqj/okNuCnEOgvhUglJTyoMGmde5mblWKTbhBXbI1LI+Tqeh4a1f+lawRvG/wP7f0o+/Nx5WTKNzTy+H19L86RDBOzYgBjBHGWYqidAKkmwGlIljQBjD1YLiRefytfdR5w69Z+alkMFAVUscx+Ns+ojMYNdyX5aAfSzvUaRH0WNUPGOE35psQ0rEZ3A5/40C5+bGQ2p11A13Vewo7wAjG3Ux3Em7cZ9YsRR2xJzaQx52hyRBa8skHsbQdSBubUk4pF2gWsEL5gQDzBrj6rmc2R/v/pr+RmY4FBD9mfFJB3sqYmlFVKiYowj61WkUx79s+thOOZx0iqe7+wYQAIM0ZssIDGNKXEkFgYWRKjLgJQGwbyd38w63aSDPj/rpbj9QNE+XOqHdxozFIsxKqAmwwzd6hjPJmhtJYtIvnsJylTCgQUi4uQh34VfNuFlxRS4bCgDI1ZY70qKxmaXxuw2tS2CmaFVS3w1r7UEodxewVDwmXWYgAZbhaQPoG2spsgXkpgYfPYbE8JA5K9DOYItFwMXYkNA9rp3hwbIXzkFFY3P8jT01M6B0hvAid+aY=
