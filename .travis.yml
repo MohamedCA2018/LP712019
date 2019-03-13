@@ -12,8 +12,8 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: a2e8029c-d303-4817-88d9-a355f4c25140
-  app: lp712019
+    secure: 9068ca9c-affd-4b78-81e6-4509c05df5e1
+  app: dry-bastion-60075
 
 # env:
 #   global:
